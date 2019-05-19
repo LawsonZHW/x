@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+  <meta name="description" content="Responsive Bootstrap HTML Mobile Application Template - Free Download">
+  <title>I love you</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+  <link rel="stylesheet" href="assets/bootstrap-material-design-font/css/material.css">
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/et-line-font-plugin/style.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/animate.css/animate.min.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <!--时间计算-->
+    <script type="text/javascript">
+        var dataTime = "0";
+        //时间戳转dddd-mm-dd HH24:hh:MM:ss
+        var d = new Date(dataTime * 1000);
+        var date = (d.getFullYear()) + "-" + (d.getMonth() + 1) + "-" + (d.getDate()) + "-" + (d.getHours()) + ":" + (d.getMinutes()) + ":" + (d.getSeconds());
+        var startTime = date;
+        console.info(startTime)
+        function count() {
+            var currTime = new Date(); //当前时间
+            //将xxxx-xx-xx的时间格式，转换为 xxxx/xx/xx的格式
+            startTime = startTime.replace(/\-/g, "/");
+            var sTime = new Date(startTime);
+            var totalTime = currTime.getTime() - sTime.getTime();
+            var days = parseInt(totalTime / parseInt(1000 * 60 * 60 * 24));
+            // 计算一共有多少小时
+            var allhours = parseInt(totalTime / parseInt(1000 * 60 * 60 ));
+            //计算一共有多少分钟
+            var allminutes=parseInt(totalTime / parseInt(1000 * 60 ));
+            //计算一共有多少秒钟
+            var allseconds=parseInt(totalTime / parseInt(1000));
+
+            totalTime = totalTime % parseInt(1000 * 60 * 60 * 24);
+            var hours = parseInt(totalTime / parseInt(1000 * 60 * 60));
+            totalTime = totalTime % parseInt(1000 * 60 * 60);
+            var minutes = parseInt(totalTime / parseInt(1000 * 60));
+            totalTime = totalTime % parseInt(1000 * 60);
+            var seconds = parseInt(totalTime / parseInt(1000));
+            var time = "";
+            if (days >= 1) {
+                time = days + "天" + hours + "时" + minutes + "分" + seconds + "秒";
+            } else if (hours >= 1) {
+                time = hours + "时" + minutes + "分" + seconds + "秒";
+            } else if (minutes >= 1) {
+                time = minutes + "分" + seconds + "秒";
+            } else {
+                time = seconds + "秒";
+            }
+
+            document.getElementById("time_all").innerHTML = "" + time;
+            document.getElementById("time_hours").innerHTML="有："+allhours+"小时";
+            document.getElementById("time_minutes").innerHTML="一共："+allminutes+"分钟";
+            document.getElementById("time_seconds").innerHTML="总计："+allseconds+"秒！";
+            setTimeout("count()", 1000);
+        }
+        window.onload = count;
+    </script>
+    <link rel="stylesheet" href="assets/theme/css/index.css">
+
+</head>
+<body>
+<div id="menu-0" custom-code="true"><section>
+<!--顶部导航-->
+    <nav class="navbar navbar-dropdown bg-color transparent navbar-fixed-top">
+        <div class="container">
+
+            <div class="mbr-table">
+                <!--顶部左边文字-->
+                <div class="mbr-table-cell">
+                        <a class="navbar-caption" href="#">My Love</a>
+                </div>
+                <!--顶部右边导航-->
+                <div class="mbr-table-cell">
+
+                    <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        <div class="hamburger-icon"></div>
+                    </button>
+                    <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar"><li class="nav-item"><a class="nav-link link mbr-editable-menu-item" href="index.html#header3-k">HOME</a></li>
+
+                        <li class="nav-item"><a class="nav-link link mbr-editable-menu-item" href="index.html#pricing-table2-f">OurTime</a></li>
+
+                    <li class="nav-item dropdown open">
+                        <a class="nav-link link dropdown-toggle mbr-editable-menu-item" href="index.html#pricing-table2-f" data-toggle="dropdown-submenu" aria-expanded="true">照片合集</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item mbr-editable-menu-item" href="#">合照</a>
+                            <a class="dropdown-item mbr-editable-menu-item" href="#">出游照</a>
+                            <a class="dropdown-item mbr-editable-menu-item" href="#">个人照</a>
+                            <a class="dropdown-item mbr-editable-menu-item" href=".#">都没时间弄</a>
+                        </div>
+                    </li>
+
+                  <li class="nav-item nav-btn"><a class="nav-link btn btn-white btn-white-outline mbr-editable-menu-item" href="#"><span class="mbri-apple mbr-iconfont mbr-iconfont-btn"></span>我爱你，你有想我吗？</a></li>
+                        <li class="nav-item nav-btn"><a class="nav-link btn btn-white btn-white-outline mbr-editable-menu-item" href="#"><span class="mbri-android mbr-iconfont mbr-iconfont-btn"></span>宝宝爱你哦！</a></li>
+
+                    </ul>
+                    <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        <div class="close-icon"></div>
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+</section>
+<!--第二栏-->
+<section class="mbr-section mbr-section-hero mbr-section-full header2 mbr-parallax-background mbr-after-navbar" id="header2-1" style="background-image: url(assets/images/f-mwo-dznni-averie-woodard-2000x2000.jpg);">
+
+    <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(71, 85, 119);">
+    </div>
+
+    <div class="mbr-table mbr-table-full">
+        <div class="mbr-table-cell">
+
+            <div class="container">
+                <div class="mbr-section row">
+                    <div class="mbr-table-md-up">
+                        <div class="mbr-table-cell col-md-5 content-size text-xs-center text-md-right">
+                            <!--大标题-->
+                            <h3 class="mbr-section-title display-2">ZhangLiBin   AND  LiYuanYuan</h3>
+                            <!--描述文字-->
+                            <div class="mbr-section-text">
+                                <p>我的世界很大，装得下万马千军，我的世界又很小，所见之处便只有你。&nbsp;</p>
+                            </div>
+
+                            <!--<div class="mbr-section-btn"><a class="btn btn-black" href="https://mobirise.com">IPHONE</a> <a class="btn btn-black" href="https://mobirise.com">ANDROID</a> </div>-->
+
+                        </div>
+                        <div class="mbr-table-cell mbr-valign-top mbr-left-padding-md-up col-md-7 image-size" style="width: 50%;">
+                            <div class="mbr-figure" ><img  src="assets/images/myImage/ok1.png"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="mbr-arrow mbr-arrow-floating hidden-sm-down" aria-hidden="true"><a href="#header3-k"><i class="mbr-arrow-icon"></i></a></div>
+
+</section>
+
+<section class="mbr-section mbr-section__container article" id="header3-k" style="background-color: rgb(244, 244, 244); padding-top: 60px; padding-bottom: 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3 class="mbr-section-title display-2">你说过</h3>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mbr-section article mbr-section__container" id="content1-j" style="background-color: rgb(244, 244, 244); padding-top: 20px; padding-bottom: 20px;">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 lead">想跟我去海边，海边有徐徐的海风，风中会掺杂着海水的咸味，
+                在盛夏，海风会把人身上的热气全都吹尽，还你一片清凉。你喜欢听海风吹得椰子树沙沙作响的声音，
+                喜欢海风在你耳畔呼呼作响的声音。你说那种感觉很美妙。&nbsp;</div>
+        </div>
+    </div>
+
+</section>
+
+<section class="mbr-cards mbr-section mbr-section-nopadding" id="features1-e" style="background-color: rgb(244, 244, 244);">
+
+        
+<!--第一张图片和介绍-->
+    <div class="mbr-cards-row row striped">
+
+        <div class="mbr-cards-col col-xs-12 col-lg-3" style="padding-top: 80px; padding-bottom: 80px;">
+            <div class="container">
+                <div class="card cart-block">
+                    <div class="card-img"><img src="assets/images/myImage/ok2.jpg" class="card-img-top"></div>
+                    <div class="card-block">
+                        <h4 class="card-title">我说：</h4>
+                        <h5 class="card-subtitle">My love</h5>
+                        <p class="card-text">“ 我希望到我满脸褶子的时候、陪在我身边的依旧是你！ ”</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mbr-cards-col col-xs-12 col-lg-3" style="padding-top: 80px; padding-bottom: 80px;">
+            <div class="container">
+                <div class="card cart-block">
+                    <div class="card-img"><img src="assets/images/myImage/ok3.jpg" class="card-img-top"></div>
+                    <div class="card-block">
+                        <h4 class="card-title">你说：</h4>
+                        <h5 class="card-subtitle">my love</h5>
+                        <p class="card-text">“ 很多语言都是假的，只有一起经历过的才是真的。 ”</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="tlinks">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>-->
+        <div class="mbr-cards-col col-xs-12 col-lg-3" style="padding-top: 80px; padding-bottom: 80px;">
+            <div class="container">
+                <div class="card cart-block">
+                    <div class="card-img"><img src="assets/images/myImage/ok4.jpg" class="card-img-top"></div>
+                    <div class="card-block">
+                        <h4 class="card-title">我说：</h4>
+                        <h5 class="card-subtitle">My love</h5>
+                        <p class="card-text">“ 你有一双会说话的眼睛，你有善解人意的心，你的微笑总是让我为你着迷！”</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mbr-cards-col col-xs-12 col-lg-3" style="padding-top: 80px; padding-bottom: 80px;">
+            <div class="container">
+                <div class="card cart-block">
+                    <div class="card-img"><img src="assets/images/myImage/ok5.jpg" class="card-img-top"></div>
+                    <div class="card-block">
+                        <h4 class="card-title">你说：</h4>
+                        <h5 class="card-subtitle">My love</h5>
+                        <p class="card-text">“ 千言万语，都不及你的一句我爱你。 ”</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</section>
+<!--end-->
+    <!--下一栏开始-->
+<section class="mbr-section" id="msg-box4-6" style="background-color: rgb(255, 255, 255); padding-top: 120px; padding-bottom: 120px;">
+    <div class="container">
+        <div class="row">
+            <div class="mbr-table-md-up">
+              <div class="mbr-table-cell col-md-5 text-xs-center text-md-right content-size">
+                  <h3 class="mbr-section-title display-2">Our Story</h3>
+                  <div class="lead">
+
+                    <p>这个故事要从2017年的7月某一天说起，记得那时是一个难忘的夏天，在一次游戏中我认识了一个叫李园园的女生。当第一次见你时，心里就有种冲动，我很好奇这位小姐姐到底是一个怎么样的人，想了解一下，于是我们的故事就这样开始了
+                        ......</p>
+
+                  </div>
+
+                  <div><a class="btn btn-black" href="#">李园园</a> <a class="btn btn-black" href="#">张利彬的故事</a></div>
+              </div>
+
+
+              
+
+
+              <div class="mbr-table-cell mbr-left-padding-md-up mbr-valign-top col-md-7 image-size" style="width: 50%;">
+                  <div class="mbr-figure">
+                      <!--<iframe class="mbr-embedded-video" src="https://www.youtube.com/embed/Tq7p44IA-1U?rel=0&amp;amp;showinfo=0&amp;autoplay=0&amp;loop=0" width="1280" height="720" frameborder="0" allowfullscreen>-->
+                      <!--</iframe>-->
+                      <div class="card-img"><img src="assets/images/myImage/ok6.jpg" class="card-img-top"></div>
+                  </div>
+              </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="mbr-section mbr-background" id="testimonials1-7" style="background-image: url(assets/images/mbr-2000x1333.jpg); padding-top: 120px; padding-bottom: 120px;">
+
+    <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(255, 255, 255);">
+    </div>
+
+        <div class="mbr-section mbr-section__container mbr-section__container--middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-xs-center">
+                        <h3 class="mbr-section-title display-2">我们的这四年“</h3>
+                        <small class="mbr-section-subtitle">四年，对生活来说四年如白驹过隙，转瞬即逝。但对于我们这个年纪的爱情来说四年真的是个不可想象的时间。
+                        在这四年里，我们磕磕盼盼，有过争吵、有过矛盾，闹过脾气、闹过分手。但最后这四年我们一起走过来了，是对谁错也就不重要了，爱情里本就没有对错。
+                            在这个时代里，爱情本就不那么容易，拥有爱情更加不容易。 未来的日子还长， 我们一起 且行且珍惜
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <div class="mbr-testimonials mbr-section mbr-section-nopadding">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xs-12 col-lg-4">
+                    <div class="mbr-testimonial card mbr-testimonial-lg">
+                        <div class="card-block"><p>“ 第一年是开心的一年，什么烦恼都没有，只要是跟你在一起心里就很舒服，不管遇见什么困难只要和你在一起什么都能解决。”</p></div>
+                        <div class="mbr-author card-footer">
+                            <div class="mbr-author-img"><img src="assets/images/myImage/ok7.1.jpg" class="img-circle"></div>
+                            <div class="mbr-author-name">我们的第一年</div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-lg-4">
+
+                    <div class="mbr-testimonial card mbr-testimonial-lg">
+                        <div class="card-block"><p>“第二年磕磕碰碰 ，情绪起伏不断，经常吵架，可以说是周周吵月月吵。可能是因为彼此习惯了对方变得有点随意，不管我是对是错都是我的错，因为女朋友都是对的嘛，尽管我有时候比较作，但是你也包容了我，原谅了我。有时候把你惹生气了没有办法使你开心，因为你没在我身边，我就很着急手无寸铁，唯一能让你开心的就是一句我爱你。跟你在一起这么久了唯一就是我爱你说的最后多的，别人都说我爱你在心里不需要说出来可是你不一样 你这只臭肥猫就刺激特殊，但是我也喜欢说，因为你会回我一句  meet too!”</p></div>
+                        <div class="mbr-author card-footer">
+                            <div class="mbr-author-img"><img src="assets/images/myImage/ok7.2.jpg" class="img-circle"></div>
+                            <div class="mbr-author-name">我们的第二年</div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-lg-4">
+                    <div class="mbr-testimonial card mbr-testimonial-lg">
+                        <div class="card-block"><p>“ 未来还有好多好多年等着我们去书写 ”</p></div>
+                        <div class="mbr-author card-footer">
+                            <div class="mbr-author-img"><img src="assets/images/myImage/ok7.5.jpg" class="img-circle"></div>
+                            <div class="mbr-author-name">我们的第三年</div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="mbr-section " id="pricing-table2-f" style="background-color: rgb(255, 255, 255); padding-top: 120px; padding-bottom: 120px;">
+
+
+    <div class="mbr-section mbr-section__container mbr-section__container--middle">
+      <div class="container">
+          <div class="row">
+              <div class="col-xs-12 text-xs-center">
+                  <h3 class="mbr-section-title display-2">How long have we been in love?</h3>
+                  <small class="mbr-section-subtitle">从2017年08月23日我跟你告白：</small>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="mbr-section mbr-section-nopadding mbr-price-table">
+      <div class="row">
+            <h3 class="text-lg-center text-md-center text-sm-center text-xs-center">635天15240小时914400分54864000秒</h3>
+      </div>
+    </div>
+
+
+
+</section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-xs-center">
+                <h3 class="mbr-section-title display-2">Beautiful Now</h3>
+            </div>
+        </div>
+    </div>
+<section class="mbr-section article mbr-parallax-background" id="msg-box3-g" style="background-image: url(assets/images/myImage/ok8.png); padding-top: 120px; padding-bottom: 120px;">
+
+    <div class="mbr-overlay" style="opacity: 0.4; background-color: rgb(255, 255, 255);">
+    </div>
+
+
+</section>
+
+<section class="mbr-section article" id="msg-box22-g" style="padding-top: 40px; padding-bottom: 20px;">
+
+    <div class="mbr-overlay" style="background-color: #f4f4f4;">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-xs-center">
+                <p>2019年5月20日 <a href="#" target="_blank" title="模板之家">张利彬</a> 送给 <a href="#" title="liyuanyuan" target="_blank">李园园</a>小可爱的礼物！</p>
+            </div>
+        </div>
+    </div>
+    <audio  autoplay="autoplay" loop="loop">
+        <source src="assets/music/I Love You.mp3" type="audio/mpeg" />
+    </audio>
+</section>
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smooth-scroll/smooth-scroll.js"></script>
+  <script src="assets/dropdown/js/script.min.js"></script>
+  <script src="assets/touch-swipe/jquery.touch-swipe.min.js"></script>
+  <script src="assets/viewport-checker/jquery.viewportchecker.js"></script>
+  <script src="assets/jarallax/jarallax.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  
+  
+  <input name="animation" type="hidden">
+  </div>
+
+
+  </body>
+</html>
